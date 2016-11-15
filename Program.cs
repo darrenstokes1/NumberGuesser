@@ -31,21 +31,26 @@ namespace NumberGuesser
 
                 var isValid = int.TryParse(Console.ReadLine(), out userGuess);
                 ++numGuess;
+                
                 if (numGuess == maxGuesses)
                 {
                     Console.WriteLine("Game Over! You've exceeded your limit"); 
-                    Console.WriteLine("The correct number was ", randNum2);
+                    Console.WriteLine("The correct number was {0} ", randNum2);
+                    Console.ReadLine();
                 }
                 else if (userGuess == randNum2)
                 {
                     Console.WriteLine("Congrats! You guessed correctly");
+                    Console.ReadLine();
                 }
                 else if (userGuess < randNum2)
                 {
                     Console.WriteLine("Wrong number too low...Please try again");
+                  
                 }
                 else if (userGuess > randNum2) {
                     Console.WriteLine("Wrong number too high...Please try again");
+                   
                 }
                
             }
